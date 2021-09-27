@@ -1,6 +1,6 @@
 # portfolio-project
 
-Write a class named KubaGame for playing a board game called Kuba. You can see the rules [here](https://sites.google.com/site/boardandpieces/list-of-games/kuba).
+You can see the rules [here](https://sites.google.com/site/boardandpieces/list-of-games/kuba).
 A good video resource to watch this game rules is [here](https://www.youtube.com/watch?v=XglqkfzsXYc).
 
 Game ends when a player wins. A players wins by pushing off and capturing seven neutral red stones or by pushing off all of the opposing stones. A player who has no legal moves available has lost the game.
@@ -13,7 +13,7 @@ Rules to move a marble:
 - You need an empty space(or the edge of the board) on the side you are pushing away from. This is as shown in the video.
 - A player cannot undo a move the opponent just made (if it leads to the exact same board position)
 
-Your KubaGame class **must** include the following:
+Kuba class include the following:
 
 * An `init` method that takes as its parameters two tuples, each containing player name and color of the marble that the player is playing (ex: ('PlayerA', 'B'), ('PlayerB','W')) and it intializes the board. On the board R, B, W can be used to represent Red, Black and White marbles. 
 
@@ -41,9 +41,7 @@ Directions are explained in the following image:
 
 ![directions](https://user-images.githubusercontent.com/32501313/117386394-b08b1180-ae9b-11eb-9779-9bbd8531c91d.PNG)
 
-The file must be named: **KubaGame.py** and it should not contain any test code outside the `main()` function. Your code for this project should **not** be made public, in any manner, until after the term has ended.
-
-Here's a very simple example of how your `KubaGame` class could be used by the autograder or a TA:
+Here's a very simple example of how `KubaGame` class could be used:
 ```
 game = KubaGame(('PlayerA', 'W'), ('PlayerB', 'B'))
 game.get_marble_count() #returns (8,8,13)
@@ -54,3 +52,4 @@ game.make_move('PlayerA', (6,5), 'F')
 game.make_move('PlayerA', (6,5), 'L') #Cannot make this move
 game.get_marble((5,5)) #returns 'W'
 ```
+Note/Ideas for future modifications: a) potentially translate game from python to javascript b) create a docker container for game c) implement TKinter to create user interface
